@@ -1,11 +1,15 @@
 package core.basesyntax.model;
 
-public class RightTriangle extends Figure {
+import core.basesyntax.Drawable;
+import core.basesyntax.FigureArea;
+
+public class RightTriangle implements Drawable, FigureArea {
+    private String color;
     private double firstLeg;
     private double secondLeg;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
-        super(color);
+        this.color = color;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }

@@ -1,11 +1,15 @@
 package core.basesyntax.model;
 
-public class Rectangle extends Figure {
+import core.basesyntax.Drawable;
+import core.basesyntax.FigureArea;
+
+public class Rectangle implements Drawable, FigureArea {
+    private String color;
     private double width;
     private double height;
 
     public Rectangle(String color, double width, double height) {
-        super(color);
+        this.color = color;
         this.width = width;
         this.height = height;
     }

@@ -1,10 +1,14 @@
 package core.basesyntax.model;
 
-public class Circle extends Figure {
+import core.basesyntax.Drawable;
+import core.basesyntax.FigureArea;
+
+public class Circle implements Drawable, FigureArea {
+    private String color;
     private double radius;
 
     public Circle(String color, double radius) {
-        super(color);
+        this.color = color;
         this.radius = radius;
     }
 
@@ -15,8 +19,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: "
-                + getArea() + " sq. units, radius: "
-                + radius + " units, color: " + color);
+        System.out.println("Figure: circle, area: " + getArea() +
+                " sq. units, radius: " + radius + " units, color: " + color);
     }
 }
