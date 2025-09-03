@@ -1,6 +1,8 @@
 package core.basesyntax.model;
 
-public abstract class Figure {
+import core.basesyntax.Drawable;
+
+public abstract class Figure implements Drawable {
     protected String color;
 
     public Figure(String color) {
@@ -8,6 +10,4 @@ public abstract class Figure {
     }
 
     public abstract double getArea();
-
-    public abstract void draw();
 }
